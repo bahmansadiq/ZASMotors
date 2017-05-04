@@ -1,0 +1,124 @@
+<div class="container" ng-hide="vm.newInventoryView">
+    <div class="row">
+        
+            <div class="col-md-12">
+                <div class="navbar-form navbar-right" role="search">
+                    <div class="form-group form-group-sm col-sm-offset-4">
+                        <input type="text" class="form-control"  placeholder="Search...">
+                    </div>
+                </div>
+                <div class="navbar-form navbar-right">
+                    <div class="form-group form-group-sm col-sm-offset-9">
+                    <button type="button" class="btn btn-custom btn-primary btn-sm" ng-click="vm.newInventoryView =!vm.newInventoryView">Add A New Car</button>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+<pre>{{vm.allInventories}}</pre>
+
+<table>
+    <tr>
+        <th>  Make </th>
+        <th> model </tr>
+    </tr>
+    <tr ng-repeat="inventory in vm.allInventories">
+        <td>{{inventory.make}}</td>
+        <td>{{inventory.model}}</td>
+    </tr>
+
+
+</table>
+<div class="container" ng-show="vm.newInventoryView">
+    <!-- Quote Calculator -->
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">Add New Inventory</div>
+                <div class="panel-body">
+                    <div class="form">
+                        <div class="form-group form-group-sm">
+                            <label >VIN Number</label>
+                            <input  class="form-control input-sm" ng-model="vm.vin">
+                        </div>
+
+                        <div class="form-group form-group-sm">
+                            <label >Make</label>
+                            <input  class="form-control input-sm" ng-model="vm.make">
+                        </div>
+
+                        <div class="form-group form-group-sm">
+                            <label >Model</label>
+                            <input  class="form-control input-sm" ng-model="vm.model">
+                        </div>
+
+                        <div class="form-group form-group-sm">
+                            <label >Year</label>
+                            <input  class="form-control input-sm" ng-model="vm.year">
+                        </div>
+
+                        <div class="form-group form-group-sm">
+                            <label >Mileage</label>
+                            <input  class="form-control input-sm" ng-model="vm.mileage">
+                        </div>
+
+                        <div class="form-group form-group-sm">
+                            <label >Stock Number</label>
+                            <input  class="form-control input-sm" ng-model="vm.stockNumber">
+                        </div>
+
+                        <div class="form-group form-group-sm">
+                            <label >Engine Size </label>
+                            <input  class="form-control input-sm" ng-model="vm.engine">
+                        </div>
+
+                        <div class="form-group form-group-sm">
+                            <label >Transmission</label>
+                            <input  class="form-control input-sm" ng-model="vm.transmission">
+                        </div>
+
+                        <div class="form-group form-group-sm">
+                            <label >Fuel Type</label>
+                            <input  class="form-control input-sm" ng-model="vm.fuelType">
+                        </div>
+
+                        <div class="form-group form-group-sm">
+                            <label >Miles Per Galon</label>
+                            <input  class="form-control input-sm" ng-model="vm.mpg">
+                        </div>
+                        <div class="form-group form-group-sm">
+                            <label >Interior Color</label>
+                            <input  class="form-control input-sm" ng-model="vm.interior">
+                        </div>
+                        
+                        <div class="form-group form-group-sm">
+                            <label >Exterior Color</label>
+                            <input  class="form-control input-sm" ng-model="vm.exterior">
+                        </div>
+                        
+                        <div class="form-group form-group-sm">
+                            <label >Vehicle Options</label>
+                            <input  class="form-control input-sm" ng-model="vm.vehicleOptions">
+                        </div>
+                        
+                        <div class="form-group form-group-sm">
+                            <label>Notes</label>
+                            <textarea class="form-control input-sm" ng-model="vm.vehicleNotes"></textarea>
+                        </div>
+<!--///////////////////////////////////
+/////////////////////////////////// -->
+
+<form >
+    <div style="margin-bottom: 15px;">
+        <button type="file" name="file" id="file" ngf-select="uploadFiles($file, $invalidFiles)" accept="image/*" ngf-max-height="1000" ngf-max-size="1MB">Select File</button>
+    </div>
+</form>
+                         <button type="submit" class="btn btn-primary"  ng-click="vm.addInventory(); vm.newInventoryView =!vm.newInventoryView">Submit</button>
+
+					</div>
+				</div> 
+			</div>
+		</div>
+	</div> 
+</div> 

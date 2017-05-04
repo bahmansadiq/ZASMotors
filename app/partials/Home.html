@@ -1,0 +1,22 @@
+<!-- Navigation Bar -->
+<nav class="navbar navbar-inverse row">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+        </button>
+        <a class="navbar-brand" ui-sref="home.dealer">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a ui-sref="home.inventory">Inventory</a></li>
+            <li><a>Car Finder</a></li>
+            <li><a >Specials</a></li>
+            <li><a ui-sref="home.direction" >Directions</a></li>
+            <li><a ui-sref="home.contact"> Contact Us</a></li>
+            <li><a ui-sref="home.login" class="text-right"> Dealer Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<p ui-view></p>

@@ -6,14 +6,14 @@ var bodyParser  = require('body-parser');
 var morgan      = require('morgan');
 var mongoose    = require('mongoose');
 var passport    = require('passport'); 
-var Customer    = require('./app/models/customer.js'); // get our mongoose model
-var Inventory   = require('./app/models/inventory.js'); // get our mongoose model
-var Dealer      = require('./app/models/dealer.js');
-var Users		= require('./app/models/user.js');
-var router   = require("./app/routes/routes"); 
+var Customer    = require('./app-server/models/customer.js'); // get our mongoose model
+var Inventory   = require('./app-server/models/inventory.js'); // get our mongoose model
+var Dealer      = require('./app-server/models/dealer.js');
+var Users		= require('./app-server/models/user.js');
+var router   = require("./app-server/routes/routes"); 
 var app         = express();
 var jwt         = require('jsonwebtoken'); // used to create, sign, and verify tokens
-var config      = require('./app/config/main'); // get our config file
+var config      = require('./app-server/config/main'); // get our config file
 
 // Enable CORS
 app.use(function(req, res, next) {
@@ -37,7 +37,7 @@ app.use(bodyParser.json());
 // Initialize passport for use
 app.use(passport.initialize());  
 
-app.use(express.static(__dirname +"/public"));
+app.use(express.static(__dirname));
 app.use("/api", router);  
 
 
