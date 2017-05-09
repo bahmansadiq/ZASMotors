@@ -9,7 +9,7 @@
          //,'ngFileUpload'
          ])
         //.value ('DealerAPIBaseURL', 'http://localhost:57450/api/')
-        .value ('DealerAPIBaseURL', 'https://stormy-taiga-69133.herokuapp.com/api/');
+        .value ('DealerAPIBaseURL', 'https://stormy-taiga-69133.herokuapp.com/api/')
        .config(function($stateProvider,
                         $urlRouterProvider,
                         localStorageServiceProvider
