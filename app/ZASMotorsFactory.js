@@ -5,10 +5,10 @@
         .module('app')
         .factory('zasMotorsFactory', zasMotorsFactory);
 
-    zasMotorsFactory.$inject = ['$http', '$q'];
+    zasMotorsFactory.$inject = ['$http', '$q', 'DealerAPIBaseURL'];
 
     /* @ngInject */
-    function zasMotorsFactory($http, $q) {
+    function zasMotorsFactory($http, $q, DealerAPIBaseURL) {
         var service = {
             getInventory: getInventory,
             postInventory: postInventory,
@@ -25,7 +25,10 @@
         	 var defer = $q.defer();
             $http({
                     method: 'GET',
-                    url: 'http://localhost:57450/api/Inventories/'
+                    url: DealerAPIBaseURL +'Inventories',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
                 })
                 .then(function(response) {
                         if (typeof response.data === 'object') {
@@ -49,7 +52,7 @@
 
             $http({
                     method: 'POST',
-                    url: 'http://localhost:57450/api/Inventories',
+                    url: 'DealerAPIBaseURL/Inventories',
                     data: newInventory,
                     headers: {
                         'Content-Type': 'application/json'
@@ -82,7 +85,7 @@
              var defer = $q.defer();
             $http({
                     method: 'GET',
-                    url: 'http://localhost:57450/api/Dealers/'
+                    url: DealerAPIBaseURL + 'Dealers/'
                 })
                 .then(function(response) {
                         if (typeof response.data === 'object') {

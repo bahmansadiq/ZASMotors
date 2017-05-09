@@ -4,6 +4,7 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     connect = require('gulp-connect'), // run a local dev server
     inject = require('gulp-inject'), // inject app dependency includes on index.html
+    nodemon = require('gulp-nodemon'),
     open = require('gulp-open'); // open a URL in the browser
 
 var jsSources = ['app/*.js', 'app/**/*.js'],
@@ -58,6 +59,11 @@ gulp.task('app', function() {
     gulp.src('./index.html')
         .pipe(open(options));
 });
-
-
-gulp.task('serve', ['connect', 'watch', 'injectables', 'app']);
+gulp.task('start', function () {
+  nodemon({
+    script: 'server.js'
+  , ext: 'js html'
+  , env: { 'NODE_ENV': 'development' }
+  })
+});
+gulp.task('serve', ['connect', 'start', 'watch', 'injectables', 'app']);

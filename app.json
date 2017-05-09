@@ -1,0 +1,10 @@
+{
+  "name": "Node.js is getting started!!",
+  "description": "This app does one little thing, and does it well.",
+  "keywords": [
+    "productivity",
+    "HTML5",
+    "scalpel"
+  ],
+  "image": "heroku/node.js"
+}

@@ -12,6 +12,7 @@ var Dealer      = require('./app-server/models/dealer.js');
 var Users		= require('./app-server/models/user.js');
 var router   = require("./app-server/routes/routes"); 
 var app         = express();
+var path = require('path');
 var jwt         = require('jsonwebtoken'); // used to create, sign, and verify tokens
 var config      = require('./app-server/config/main'); // get our config file
 
@@ -19,6 +20,7 @@ var config      = require('./app-server/config/main'); // get our config file
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS');
     next();
 });
    
