@@ -25,7 +25,7 @@
         	 var defer = $q.defer();
             $http({
                     method: 'GET',
-                    url: DealerAPIBaseURL +'Inventories',
+                    url: DealerAPIBaseURL +'Inventories/',
                     headers: {
                         'Content-Type': 'application/json'
                     }
@@ -52,7 +52,7 @@
 
             $http({
                     method: 'POST',
-                    url: 'DealerAPIBaseURL/Inventories',
+                    url: DealerAPIBaseURL+'Inventories/',
                     data: newInventory,
                     headers: {
                         'Content-Type': 'application/json'
