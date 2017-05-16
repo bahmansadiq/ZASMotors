@@ -1,7 +1,46 @@
+/*header with logo here at the top of page*/
+header{
+  height: 300px;
+  padding-top: 50px;
+/*  background: #f07057;*/
+}
+
+.main-nav
+{
+  position: relative; 
+}
+
+.main-nav {
+  /*background: #fff;*/
+  z-index: 150;
+  margin-bottom: 80px;
+/*  box-shadow: 0 2px 3px rgba(0,0,0,.4);*/
+    height: 80px;
+  width: 100%;
+}
+
+.navImage{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 250px;
+    z-index: 150;
+}
+header,
+.main-nav-scrolled {
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+/* content and navbar should take over the header if scrolled down*/
+.main-nav{
+
+ 
+}
 #zasTitle {
-	font-size: 2em;
-	color: #cc0000;
-	text-align: center;
+    font-size: 2em;
+    color: #cc0000;
+    text-align: center;
 
 }
 .panel > .panel-heading {
@@ -18,7 +57,7 @@
 
 .btn-primary {
 
-	background: black;
+    background: black;
 }
 
 
@@ -97,10 +136,7 @@
     -webkit-border-radius: 50%;
     border-radius: 50%;
 }
-.need-help
-{
-    margin-top: 10px;
-}
+
 .new-account
 {
     display: block;
@@ -110,5 +146,18 @@
 
 /*user registeration*/
 
-body { padding-top:30px; }
+body {
+ margin: 0;
+ padding-top: 250px; 
+
+}
 .form-control { margin-bottom: 10px; }
+
+
+/* login query*/
+/*@media all and (max-width: 1024px) {
+    #loginPage {
+        width: 100%;
+        height: 100%;
+    }
+}*/
