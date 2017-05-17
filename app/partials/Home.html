@@ -1,3 +1,4 @@
+
 <!-- Navigation Bar -->
 <nav class="main-nav navbar navbar-inverse col-md-12 col-sm-12">
     <div class="navbar-header">
@@ -6,15 +7,19 @@
         </button>
         <a class="navbar-brand" ui-sref="home.dealer">Home</a>
     </div>
-    <div class="navbar-collapse collapse">
+    <div class="navbar-collapse collapse ">
         <ul class="nav navbar-nav">
             <li><a ui-sref="home.inventory">Inventory</a></li>
             <li><a>Car Finder</a></li>
             <li><a >Specials</a></li>
             <li><a ui-sref="home.direction" >Directions</a></li>
             <li><a ui-sref="home.contact"> Contact Us</a></li>
-            <li><a ui-sref="home.login" class="text-right"> Dealer Login</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a ui-sref="home.login" class="text-center"><span class="glyphicon glyphicon-user"></span><br>Dealer Login</a></li>
         </ul>
     </div>
+    <!-- //// -->
+    <!--  -->
 </nav>
 <p ui-view></p>

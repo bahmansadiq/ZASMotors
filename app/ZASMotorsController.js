@@ -31,7 +31,7 @@ var mn=$(".main-nav");
 $(window).scroll(function(){
     if($(this).scrollTop() > 250){
       mn.addClass("main-nav-scrolled");    
-      console.log("nav bar is scrolled");
+   //   console.log("nav bar is scrolled");
     }
     else{
         mn.removeClass("main-nav-scrolled");
