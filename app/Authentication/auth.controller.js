@@ -51,6 +51,7 @@
                         setTimeout(function(){
                               toastr.success(response.data.success);
                             }, 10);
+                        vm.newUser=!vm.newUser;
                         auth.email='';
                         auth.password='';
                         auth.firstName='';
