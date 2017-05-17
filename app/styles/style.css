@@ -5,15 +5,15 @@ header{
 /*  background: #f07057;*/
 }
 
-.main-nav
-{
-  position: relative; 
-}
-
+/*making the navbar sticky*/
 .main-nav {
+     position: relative; 
+    padding: 1%;
+    padding-bottom: 1%;
+    padding-left: 7%;
   /*background: #fff;*/
   z-index: 150;
-  margin-bottom: 80px;
+  margin-bottom: 1%;
 /*  box-shadow: 0 2px 3px rgba(0,0,0,.4);*/
     height: 80px;
   width: 100%;
